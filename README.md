@@ -1,6 +1,6 @@
 # Arduino Access Control System with Keypad and Fingerprint Sensor R305
 
-(https://github.com/ahmed-eldesoky284/Quiz-3/blob/main/Capture3.png)
+!(https://github.com/ahmed-eldesoky284/Quiz-3/blob/main/Capture3.png)
 
 
 ## Features

@@ -1,21 +1,12 @@
-# Arduino Access Control System with Keypad and Fingerprint Sensor R305
+# Ultrsonic with 7 segments 2 digits
 
 ![Access Control System](https://github.com/ahmed-eldesoky284/Quiz-3/blob/main/Capture3.png)
 
-## Features
-
-- Secure access control using a combination of password and fingerprint.
-- Programmable password for easy customization.
-- Reliable fingerprint recognition using the R305 sensor.
-- Customizable access control logic and actions.
-- Arduino-compatible, allowing for easy integration with other projects.
 
 ## Requirements
 
-To replicate or modify this project, you will need the following components:
-
-- Arduino board (e.g., Arduino Uno, Arduino Nano)
-- Keypad (any standard 4x4 or 3x4 keypad will work)
+This project about presenting a distance sent from an ultrasonic sensor on two digits seven segments’ cells in meters and centimeters and controlled by an Arduino uno.
+The project consists of two different seven segments, the first one is used to present the number of meters sent from ultrasonic sensor and the second seven segment is used to present the centimeters.
 
 
 ## Installation
@@ -32,34 +23,18 @@ To replicate or modify this project, you will need the following components:
 
 4. Open the Arduino IDE (Integrated Development Environment) on your computer.
 
-5. In the Arduino IDE, go to **File** > **Open** and navigate to the cloned repository folder. Open the `Password-Fingerprint.ino` file.
+5. In the Arduino IDE, go to **File** > **Open** and navigate to the cloned repository folder. Open the `Project-Ultrsonic.ino` file.
 
-6. Make sure you have the required libraries installed. If not, install them by going to **Sketch** > **Include Library** > **Manage Libraries** and search for the following libraries:
-
-   - `Adafruit_Fingerprint` (for fingerprint sensor)
-   - `Keypad` (for keypad)
-
-7. Select the appropriate Arduino board and port from the **Tools** menu.
-
-8. Compile and upload the code to the Arduino board by clicking on the **Upload** button.
-
-9. Once the code is uploaded successfully, open the serial monitor to view the system output.
 
 ## Usage
 
-1. Power up the Arduino board using a 5V power supply.
-
-2. The system will prompt you to enter the password using the keypad. The default password is `1345`, but you can modify it in the code.
-
-3. After entering the password, the system will prompt you to place your finger on the fingerprint sensor.
-
-4. If the entered password and fingerprint match, the system will grant access by turning on an LED or performing any other desired action. Otherwise, access will be denied.
-
-5. The system output will be displayed on the serial monitor, indicating whether access was granted or denied.
+As known every seven segment need at least a 7 different pins from the digital I/O pins but as also known the Arduino uno have only 14 digital I/O pins, so if there are two seven segments the whole digital pins are going to occupy by the seven segments and this means that there is not any available pins for any further sensors like ultrasonic, because the ultrasonic sensor needs at least two different digital pins, one for the trig and another one for echo pin.
 
 ## Customization
 
-You can customize the access control logic and actions according to your requirements. In the `Password-Fingerprint.ino` file, you will find comments and instructions to guide you through the customization process.
+The challenge here in such project is the limited number of pins in Arduino Uno and there are many different solutions for such problems but here the solution is very simple also helping to minimize the code and the number of used pins as well.
+
+As shown in the following diagram the frist seven segment has connected with just only 6 pins instead of seven and this trick had been made because the maximum distance can be measured by the ultrsonic sensor is 3 meters, So the numbers may appear on the first seven segments are 1,2,3 meters only, but according to the next representations
 
 
 
